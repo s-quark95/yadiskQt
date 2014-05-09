@@ -1,0 +1,11 @@
+prefix=/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/build/_preferred_path_
+exec_prefix=${prefix}
+libdir=/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/build/_preferred_path_/lib
+includedir=/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/build/_preferred_path_/include
+
+Name: QWebdav
+Description: QWebdav is a qt-based library to use webdav protocol
+Version: 0.0.1
+Requires: QtCore
+Libs: -L${libdir} -lqwebdav
+Cflags: -I${includedir}

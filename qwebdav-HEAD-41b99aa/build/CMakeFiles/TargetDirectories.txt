@@ -1,0 +1,1 @@
+/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/build/src/CMakeFiles/qwebdav.dir

@@ -1,0 +1,13 @@
+-I/usr/include/qt4
+-I/usr/include/qt4/QtXml
+-I/usr/include/qt4/QtNetwork
+-I/usr/include/qt4/QtCore
+-I/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/src/.
+-DQT_NO_DEBUG_OUTPUT
+-DQT_NO_DEBUG_OUTPUT
+-DQT_XML_LIB
+-DQT_NETWORK_LIB
+-DQT_CORE_LIB
+-o
+/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/build/src/moc_webdav.cxx
+/home/quark/Yandex.Disk/YaDisk/qwebdav-HEAD-41b99aa/src/webdav.h

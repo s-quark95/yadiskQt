@@ -1,0 +1,44 @@
+#include <HTTP_connect.h>
+//#include <QtNetwork/QNetworkAccessManager>
+//#include <QNetworkReply>
+
+
+void prostoClass::finishedSlot(QNetworkReply* reply){
+
+    //Ошибка? лол
+    if(reply->error() == QNetworkReply::NoError)
+    {
+        //Читаем ответ серва
+        QByteArray bytes = reply->readAll();
+        QString strg(bytes);
+        //ответег на Икранчег
+        qDebug() << strg;
+    }
+    // Если ошибка запроса
+    else
+    {
+        qDebug() << reply->errorString();
+    }
+    delete reply;
+}
+prostoClass::prostoClass(QObject *parent):QObject(parent){
+
+   
+    QSslSocket socket;
+    socket.connectToHostEncrypted("webdav.yandex.ru", 443);
+    if (!socket.waitForEncrypted()) {
+        qDebug() << socket.errorString();
+        return;
+    }
+
+    QByteArray token("polinafroloff:12369874");
+    QByteArray tmp("PROPFIND / HTTP/1.1\nHost: webdav.yandex.ru\nAccept: */*\nDepth: 1\nAuthorization: Basic ");
+    tmp.append(token.toBase64());
+    tmp.append("\r\n\r\n");
+
+    socket.write(tmp);
+    while (socket.waitForReadyRead())
+        qDebug() << socket.readAll().data();
+ 
+
+}

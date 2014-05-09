@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g -DNDEBUG   -shared -Wl,-soname,libqwebdav.so.0 -o ../lib/libqwebdav.so.0.0.1 CMakeFiles/qwebdav.dir/webdav.cpp.o CMakeFiles/qwebdav.dir/webdav_url_info.cpp.o CMakeFiles/qwebdav.dir/moc_webdav.cxx.o -lQtXml -lQtNetwork -lQtCore 

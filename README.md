@@ -9,4 +9,4 @@ OS: Linux
 
 Tested on Arch GNU/Linux, Has some bugs and shit-code:).
 I'll translate russian comments into English lang. coming soon.
-Version 0.1a
+Version 0.1a (Please, download YaDisk directory)
